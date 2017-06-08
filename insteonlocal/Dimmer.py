@@ -103,7 +103,7 @@ class Dimmer():
 
     def change_level(self, level):
         """Change light level"""
-        self.logger.info("Dimmer %S change_level: level %s", self.device_id,
+        self.logger.info("Dimmer %s change_level: level %s", self.device_id,
                          level)
 
         self.hub.direct_command(self.device_id, '21',
@@ -123,31 +123,31 @@ class Dimmer():
 
     def brighten_step(self):
         """Brighten light by one step"""
-        self.logger.info("Dimmer %S brighten_step", self.device_id)
+        self.logger.info("Dimmer %s brighten_step", self.device_id)
 
         self.hub.direct_command(self.device_id, '15', '00')
         success = self.hub.check_success(self.device_id, '15', '00')
         if success:
-            self.logger.info("Dimmer %S brighten_step: Light brightened successfully",
+            self.logger.info("Dimmer %s brighten_step: Light brightened successfully",
                              self.device_id)
             self.hub.clear_device_command_cache(self.device_id)
         else:
-            self.logger.error("Dimmer %S brighten_step: Light brightened failure",
+            self.logger.error("Dimmer %s brighten_step: Light brightened failure",
                               self.device_id)
 
 
     def dim_step(self):
         """Dim light by one step"""
-        self.logger.info("Dimmer %S dim_step", self.device_id)
+        self.logger.info("Dimmer %s dim_step", self.device_id)
 
         self.hub.direct_command(self.device_id, '16', '00')
         success = self.hub.check_success(self.device_id, '16', '00')
         if success:
-            self.logger.info("Dimmer %S dim_step: Light dimmed successfully",
+            self.logger.info("Dimmer %s dim_step: Light dimmed successfully",
                              self.device_id)
             self.hub.clear_device_command_cache(self.device_id)
         else:
-            self.logger.error("Dimmer %S dim_step: Light dim failure",
+            self.logger.error("Dimmer %s dim_step: Light dim failure",
                               self.device_id)
 
         return success
