@@ -15,6 +15,8 @@ Include the log file, the list of device models and ID's, and your hub model
 
 ## Changes
 
+0.53 2017-06-08 Fix typo in error logging
+
 0.52 2017-06-01 Set path for cache files in constructor
 
 0.51 2017-04-08 Use system temp dir
