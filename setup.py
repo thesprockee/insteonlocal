@@ -11,7 +11,7 @@ setup(
   download_url = 'https://github.com/phareous/insteonlocal/tarball/0.53',
   keywords = ['insteon'],
   package_data = {'': ['data/*.json']},
-  requires = ['requests', 'time', 'pprint', 'logging', 'logging.handlers', 'sys', 'json', 'collections'],
+  requires = ['requests'],
   provides = ['insteonlocal'],
   install_requires = [],
 #  packages=find_packages(exclude=['tests', 'tests.*']),
