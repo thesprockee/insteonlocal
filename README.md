@@ -3,6 +3,8 @@
 Python library for controlling Insteon Hub locally. This allows you to send direct commands to your Insteon Hub without having to go through the cloud, or obtain a developer API key 
 (which can be hard or impossible to get from Insteon)
 
+*If anyone would like to take over this project, please let me know via github issue. I'm mostly using ZWave/Hue and Homeseer now so I have limited hardware and time to test/work on this.*
+
 ## Troubleshooting/Reporting
 
 1. Download the insteon local package from https://github.com/phareous/insteonlocal
