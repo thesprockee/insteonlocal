@@ -35,13 +35,17 @@ from insteonlocal.OnOffOutlet import OnOffOutlet
 # double tap scenes
 # switch on updates/broadcasts
 
+
 CACHE_TTL = 20 #seconds
 CACHE_FILE = '.state'
 LOCK_FILE = 'commands.lock'
 
+
+logger = logging.getLogger(__name__)
+
 class Hub(object):
     """Class for local control of insteon hub"""
-    def __init__(self, ip_addr, username, password, port="25105", timeout=10, logger=None,
+    def __init__(self, ip_addr, username, password, port="25105", timeout=10,
                  cachepath=tempfile.gettempdir()):
         self.ip_addr = ip_addr
         self.username = username
@@ -62,7 +66,7 @@ class Hub(object):
 
         self.hub_url = 'http://' + self.ip_addr + ':' + self.port
 
-        if logger is None:
+        if not logger:
             self.logger = logging.getLogger('')
             self.logger.setLevel(logging.INFO)
         else:
